@@ -1,0 +1,6 @@
+[book]
+authors = ["GreenDelta"]
+language = "en"
+multilingual = false
+src = "src"
+title = "openLCA Collaboration Server 2.0 Manual"
