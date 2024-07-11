@@ -30,4 +30,4 @@ With this option the user can use the LCA CS for free, and has to install and ma
 2.    Install a local instance of the LCA Collaboration Server on your server 
 
       * [Hardware requirements](./chapter_8_4.md) for the LCA Collaboration Server
-      *	Installation - follow: <https://www.openlca.org/lca-collaboration-server-2-0-installation-guide/>
+      *	Installation - follow: <https://www.openlca.org/lca-collaboration-server-2-installation-guide/>
