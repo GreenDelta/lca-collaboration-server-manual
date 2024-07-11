@@ -22,7 +22,7 @@
 </style>
 
 <h2 id="header-8-3">8.3	Configuration </h2>
-We have prepared a configuration guide on openLCA.org - <a href="https://www.openlca.org/lca-collaboration-server-2-0-configuration-guide/"> Configuration Guide</a>. Also you can find some settings described below.
+We have prepared a configuration guide on openLCA.org - <a href="https://www.openlca.org/lca-collaboration-server-2-configuration-guide/"> Configuration Guide</a>. Also you can find some settings described below.
 
 <p><b>Changing settings in the web application</b></p>
 
