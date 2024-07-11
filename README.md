@@ -2,7 +2,7 @@
 
 This is the main repository for the manual of the [LCA Collaboration Server](https://www.openlca.org/collaboration-server/).
 
-The manual is created using [mdBook](https://rust-lang.github.io/mdBook/index.html) and can be browsed on its Github page: https://greendelta.github.io/openLCA2-manual/.
+The manual is created using [mdBook](https://rust-lang.github.io/mdBook/index.html) and can be browsed on its Github page: https://greendelta.github.io/lca-collaboration-server-manual/.
 
 In order to publish your changes to the manual, make sure that the `main` branch is up to date and click on _Run workflow_ on the [Deploy mdBook site to Pages](https://github.com/GreenDelta/lca-collaboration-server-manual/actions/workflows/mdbook.yml).
 
