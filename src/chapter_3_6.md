@@ -32,6 +32,8 @@ If a conflict exists, the user will be notified by the Collaboration Server like
     <figcaption>This window appears when there is a conflict, allowing for several action options</figcaption>
 </figure>
 
+It is strongly recommended to use 'Commit changes' to avoid any potential data loss. This way, your uncommitted changes will be stored in the local repository before continuing the merge process.
+
 Stash changes gets the external changes, puts them in the local database, and puts the local changes in a “box”. The user can access this box, or stash, like shown in <a href="#Figure 3-10">figure below</a>.
 
 <figure id="Figure 3-10">
