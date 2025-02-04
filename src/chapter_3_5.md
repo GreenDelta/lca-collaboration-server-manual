@@ -7,28 +7,34 @@
     figure { counter-increment: figureCounter; text-align: center}
     /* prepend the counter to the figcaption content */
     figure figcaption:before {
-        content: "Figure 3-5-" counter(figureCounter) ": "
+        content: "Figure 3-4-" counter(figureCounter) ": "
     }
     /* increment the counter for every instance of a table even if it doesn't have a caption */
     table { counter-increment: tableCounter; }
     /* prepend the counter to the figcaption content */
     caption:before {
-        content: "Table 3-5-" counter(tableCounter) ": ";
+        content: "Table 3-4-" counter(tableCounter) ": ";
     }
-    
     /* create padding between table cells*/
     th, td {
         padding: 15px;
     }
 </style>
 
-<h2 id="header-3-5">3.5	The workflow is always linear</h2>
+<h2 id="header-3-5">3.5	Getting data sets from the repository </h2>
 
-To understand how exactly the LCA Collaboration Server works, it is important to note that the workflow of committing and fetching is always linear. In practice, this means that users cannot commit data sets to the server indiscriminately. In fact, before pushing to the server, the user has to fetch the current state of the repository from the LCA Collaboration Server and merge it into his database <a href="#Figure 3-8">(figure below)</a>.
+There are two options to fetch data sets from a repository. First make sure you’re connected to the repository. 
 
-Still, two or more users can work on the same shared database at the same time. A conflict may arise if both users change the same dataset in the database ([see section 3.6](./chapter_3_6.md)).
- 
-<figure id="Figure 3-8">
-	<img src="images/chapter_3/section_5/always_linear.png" alt="Image not available">
-    <figcaption>The workflow of a commit is always linear</figcaption>
+<ol>
+<li>Right-click on the database and select repository > pull.</li>
+<li>Right-click on the database and select repository > fetch. You will later have to <i>merge</i>.</li>
+</ol>
+
+<figure id="Figure 3-7">
+	<img src="images/chapter_3/section_5/fetching_a_repository.png" alt="Image not available">
+    <figcaption>Fetching a repository from the LCA Collaboration Server in openLCA</figcaption>
 </figure>
+
+In order to see the datasets taken from the repository, you can check the commit history [see section 4.1](./chapter_4_1.md).
+
+Hint: To maintain transparency and clarity, it is recommended to get data from the repository regularly. This enables the user to trace and understand changes easily and helps to avoid conflicts [see section 3.8](./chapter_3_8.md).

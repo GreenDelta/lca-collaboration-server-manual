@@ -7,13 +7,13 @@
     figure { counter-increment: figureCounter; text-align: center}
     /* prepend the counter to the figcaption content */
     figure figcaption:before {
-        content: "Figure 3-2-" counter(figureCounter) ": "
+        content: "Figure 3-1-" counter(figureCounter) ": "
     }
     /* increment the counter for every instance of a table even if it doesn't have a caption */
     table { counter-increment: tableCounter; }
     /* prepend the counter to the figcaption content */
     caption:before {
-        content: "Table 3-2-" counter(tableCounter) ": ";
+        content: "Table 3-1-" counter(tableCounter) ": ";
     }
     /* create padding between table cells*/
     th, td {
@@ -21,47 +21,16 @@
     }
 </style>
 
-<h2 id="header-3-2">3.2	How to connect and disconnect your local openLCA to the LCA Collaboration Server</h2>
+<h2 id="header-3-2">3.2	Repositories - Create a new repository for your working group</h2>
 
-<h3>Connecting openLCA to the LCA Collaboration Server</h3>
-
-The user must have openLCA[^a] version 2.0 installed on their computer, and a server holding the LCA Collaboration Server assigned. 
+Go to Repository  in the main menu. Click  <img src="images/chapter_3/section_2/plus.png" alt="Image not available" width="30" height="25"> to create or import a new repository. There are several ways to upload the database the user wants to work with to the repository in the Collaboration Server:
 
 <ol>
-    <li>Right clicking on the database in <i>openLCA > Repository > Connect …</i></li>
-    <li>Paste the URL ( e.g. https://collab.openlca.org/cilleruelo/new_repository) of your repository and insert your user details (you will later be asked for the password)</li>
+    <li>Create new repository and commit the database from openLCA (section 3.4)</li>
+    <li>Import JSON-LD file from a previously exported JSON-LD file from the desired database in openLCA.</li>
+    <li>Import repository – this option imports a previously exported repository zip file (e.g. from another CS, or maybe a backup file)</li>
 </ol>
 
-To access collaboration server settings in openLCA, click 
+It is very important that all of the users that will be using the repository have the same version of the database that is uploaded to the repository. Users can also create a new database in their openLCA and ‘pull’ the database in the repository.
 
-<i>file > settings > collaboration</i>
-
-<figure id="Figure 3-1">
-	<img src="images/chapter_3/section_2/steps_to_connect.png" alt="Image not available">
-    <figcaption>Steps to connect a database in openLCA with a repository in the LCA Collaboration Server</figcaption>
-</figure>
-
-<br>
-
-<figure id="Figure 3-2">
-	<img src="images/chapter_3/section_2/options_for_the_LCA_Collaboration_Server.png" alt="Image not available">
-    <figcaption>options for the LCA Collaboration Server can be accessed through <i>file > preferences > collaboration</i></figcaption>
-</figure></br>
-
-<figure id="Figure 3-3">
-	<img src="images/chapter_3/section_2/connected_database.png" alt="Image not available">
-    <figcaption>Connected database</figcaption>
-</figure>
-
-To disconnect from a repository right-click on the respective database and select <i>repository > disconnect</i>.
-
-<h3 id="header-3-2-1">Connecting to an existing repository through Git</h3>
-
-If you want to start with an existing repository you can use “Import/From git…”. This is like “creating a new empty database”, “connect” and “pull” in once.
-
-<figure id="Figure 3-4">
-	<img src="images/chapter_3/section_2/git_repository.png" alt="Image not available">
-    <figcaption>connecting to a Git repository</figcaption>
-</figure>
-
-[^a]: To download openLCA visit: <a href="https://www.openlca.org/download/"> <u>https://www.openlca.org/download/</u></a> 
+When creating a repository, it is possible to limit the repository’s maximum size on the server (0 = unlimited). For more about the repository board, see [section 2.3.1](./chapter_2_3.md). 

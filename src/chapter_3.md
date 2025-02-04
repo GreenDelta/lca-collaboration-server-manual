@@ -25,16 +25,18 @@
 
 <h3>Sections</h3>
 
-[3.1    Repositories - Create a new repository for your working group](./chapter_3_1.md)
+[3.1    The underlying workflow explained](./chapter_3_1.md)
 
-[3.2    How to connect and disconnect your local openLCA to the LCA Collaboration Server](./chapter_3_2.md)
+[3.2    Repositories - Create a new repository for your working group](./chapter_3_2.md)
 
-[3.3    Adding data to the connected repository](./chapter_3_3.md)
+[3.3    How to connect and disconnect your local openLCA to the LCA Collaboration Server](./chapter_3_3.md)
 
-[3.4    Getting data sets from the repository](./chapter_3_4.md)
+[3.4    Adding data to the connected repository](./chapter_3_4.md)
 
-[3.5    The workflow is always linear](./chapter_3_5.md)
+[3.5    Getting data sets from the repository](./chapter_3_5.md)
 
-[3.6    Conflicts](./chapter_3_6.md)
+[3.6    The workflow is always linear](./chapter_3_6.md)
 
-[3.7    Pitfalls](./chapter_3_7.md)
+[3.7    Conflicts](./chapter_3_7.md)
+
+[3.8    Pitfalls](./chapter_3_8.md)

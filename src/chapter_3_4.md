@@ -7,34 +7,39 @@
     figure { counter-increment: figureCounter; text-align: center}
     /* prepend the counter to the figcaption content */
     figure figcaption:before {
-        content: "Figure 3-4-" counter(figureCounter) ": "
+        content: "Figure 3-3-" counter(figureCounter) ": "
     }
     /* increment the counter for every instance of a table even if it doesn't have a caption */
     table { counter-increment: tableCounter; }
     /* prepend the counter to the figcaption content */
     caption:before {
-        content: "Table 3-4-" counter(tableCounter) ": ";
+        content: "Table 3-3-" counter(tableCounter) ": ";
     }
+    
     /* create padding between table cells*/
     th, td {
         padding: 15px;
     }
 </style>
 
-<h2 id="header-3-4">3.4	Getting data sets from the repository </h2>
+<h2 id="header-3-4">3.4	Adding data to the connected repository</h2>
 
-There are two options to fetch data sets from a repository. First make sure you’re connected to the repository. 
+Right click on the database name in openLCA > Repository > Commit. Alternatively, you can select specific datasets to be uploaded, right click > Repository > Commit. The speed of the push depends on network connection and the size of the database. Note that the database in openLCA should be connected to the LCA Collaboration Server [section 3.3](./chapter_3_3.md).
 
-<ol>
-<li>Right-click on the database and select repository > pull.</li>
-<li>Right-click on the database and select repository > fetch. You will later have to <i>merge</i>.</li>
-</ol>
+The user must always include a commit message to be able to commit data to the repository. 
 
-<figure id="Figure 3-7">
-	<img src="images/chapter_3/section_4/fetching_a_repository.png" alt="Image not available">
-    <figcaption>Fetching a repository from the LCA Collaboration Server in openLCA</figcaption>
+As shown in the figure below, there are two options to commit the data. Commit and Push will directly upload the selected data in the repository on the server. Commit will store the commit locally and is pending to be <i>pushed</i>.
+
+<figure id="Figure 3-5">
+	<img src="images/chapter_3/section_4/two_options.png" alt="Image not available">
+    <figcaption>There are two options to commit data to the repository</figcaption>
 </figure>
+ 
+<figure id="Figure 3-6">
+	<img src="images/chapter_3/section_4/commit_pending.png" alt="Image not available">
+    <figcaption>an arrow will show when there is a commit pending to be pushed (arrow upwards), or a fetch pending to be merged (arrow downwards)</figcaption>
+</figure>
+ 
+Uploading the whole database for the first time (first commit) may take around 15 minutes. It is also possible to select only specific data sets for a commit via right-click + CTRL.
 
-In order to see the datasets taken from the repository, you can check the commit history [see section 4.1](./chapter_4_1.md).
-
-Hint: To maintain transparency and clarity, it is recommended to get data from the repository regularly. This enables the user to trace and understand changes easily and helps to avoid conflicts [see section 3.7](./chapter_3_7.md).
+<b>Hint I</b>: To maintain transparency and clarity, it is recommended to regularly commit small data sets rather than to occasionally commit large data sets. This helps team members to trace and understand changes, guarantees clean versioning of a repository and helps to avoid pitfalls ([see section 3.8](./chapter_3_8.md)).

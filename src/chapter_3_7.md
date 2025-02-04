@@ -7,47 +7,43 @@
     figure { counter-increment: figureCounter; text-align: center}
     /* prepend the counter to the figcaption content */
     figure figcaption:before {
-        content: "Figure 3-7-" counter(figureCounter) ": "
+        content: "Figure 3-6-" counter(figureCounter) ": "
     }
     /* increment the counter for every instance of a table even if it doesn't have a caption */
     table { counter-increment: tableCounter; }
     /* prepend the counter to the figcaption content */
     caption:before {
-        content: "Table 3-7-" counter(tableCounter) ": ";
+        content: "Table 3-6-" counter(tableCounter) ": ";
     }
-   
     /* create padding between table cells*/
     th, td {
         padding: 15px;
     }
 </style>
 
-<h2 id="header-3-7">3.7	Pitfalls</h2>
+<h2 id="header-3-7">3.7	Conflicts</h2>
 
-Ultimately, users are responsible for the integrity of a repository and must understand that a repository is a complex interlinked system. Interlinkages must be respected, and a commit must always contain all interlinkages to any of the changes in the data set.
+Conflicts may occur if two or more users work on the same database item or interlinked database items. This is best avoided by directly coordinating work within your team as well as performing regular pulls and to push regularly. The diff utility ([under section 4.2](./chapter_4_2.md)) assists in detecting commits by other users and identifying potential conflicts ([see section 3.8](./chapter_3_8.md)).
 
-<h3 id="header-3-7-1">3.7.1	Validating databases</h3>
-
-To assure that all interlinkages within a database are set correctly, databases should be validated regularly. To do so, right-click on a database and select validate (shown in figures below). A validation identifies whether all linkages within a database are working.
-
-If a validation fails, missing interlinkages should be fixed before performing a commit. If a user is unable to validate a database it is recommended to discard changes, fetch the repository again and to redo modelling steps. A user may fail to validate a database if corrupt data sets (which were committed by other users) were fetched from the repository. 
-
-<figure id="Figure 3-12">
-	<img src="images/chapter_3/section_7/linkages.png" alt="Image not available">
-    <figcaption>'Validate' allows one to check whether all linkages within a database are working</figcaption>
+If a conflict exists, the user will be notified by the Collaboration Server like shown in the <a href="#Figure 3-9">figure below</a>.
+ 
+<figure id="Figure 3-9">
+	<img src="images/chapter_3/section_7/window_appears.png" alt="Image not available">
+    <figcaption>This window appears when there is a conflict, allowing for several action options</figcaption>
 </figure>
 
-<figure id="Figure 3-13">
-	<img src="images/chapter_3/section_7/success_message.png" alt="Image not available">
-    <figcaption>Success message when validating the database</figcaption>
-</figure> 
+It is strongly recommended to use 'Commit changes' to avoid any potential data loss. This way, your uncommitted changes will be stored in the local repository before continuing the merge process.
 
-<h3 id="header-3-7-2">3.7.2	Example 1 - Missing interlinked flow</h3>
+Stash changes gets the external changes, puts them in the local database, and puts the local changes in a “box”. The user can access this box, or stash, like shown in <a href="#Figure 3-10">figure below</a>.
 
-A user adds a flow to a local database and uses the flow as an input for a process. The user commits the new process to the repository but does not commit the underlying flow. The linked flow is missing in the repository and corrupts the database for other users.
+<figure id="Figure 3-10">
+	<img src="images/chapter_3/section_7/access_the_stash.png" alt="Image not available">
+    <figcaption>Access the stash</figcaption>
+</figure>
 
-<h3 id="header-3-7-3">3.7.3	Example 2 - Modified flow property</h3>
+After clicking “Apply“, the Merge dialogue (<a href="#Figure 3-11">figure below</a>) will open, where you can see the differences between your local database and the repository, and decide what to do.
 
-A user changes the flow property of an existing flow in a local openLCA database and uses the flow with the updated property in a process. The user commits the process to the repository but not the flow with the modified flow property. The modification of the flow is missing in the repository and corrupts the data set in the repository for other users.
-
-
+<figure id="Figure 3-11">
+	<img src="images/chapter_3/section_7/merge_dialogue.png" alt="Image not available">
+    <figcaption>Merge dialogue helps resolve conflicts</figcaption>
+</figure>
