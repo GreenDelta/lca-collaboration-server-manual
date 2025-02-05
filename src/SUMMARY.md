@@ -16,6 +16,7 @@
     - [The workflow is always linear](./chapter_3_6.md)
     - [Conflicts](./chapter_3_7.md)
     - [Pitfalls](./chapter_3_8.md)
+    - [Using the API to download a dataset as JSON](./chapter_3_9.md)
 - [Features](./chapter_4.md)
     - [Basic features](./chapter_4_1.md)
     - [Advanced features](./chapter_4_2.md)
