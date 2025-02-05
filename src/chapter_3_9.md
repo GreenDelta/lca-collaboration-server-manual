@@ -39,7 +39,7 @@ curl -s -X GET https://example-url.com/ws/public/browse/group/repo/PROCESS/ab12d
         --cookie "JSESSIONID=43E4CFD98E627C4C189C40D4B4FAE2C6"
 ```
 
-If instead you want to obtain a package ready to import into openLCA, containing the dataset and including references, you can call the download API to prepare a package, the url is: /ws/public/download/json/prepare/{group}/{repo}/{modelType}/{refId}, it will return a token with which you need to call the download url /ws/public/download>
+If instead you want to obtain a package ready to import into openLCA, containing the dataset and including references, you can call the download API to prepare a package, the url is: /ws/public/download/json/prepare/{group}/{repo}/{modelType}/{refId}, it will return a token with which you need to call the download url /ws/public/download/{token}
 
 ```
 curl -s -X GET https://example-url.com/ws/public/download/json/prepare/group/repo/PROCESS/ab12dfa3-3297-9360-999a-33d166fed26a \
