@@ -40,3 +40,5 @@
 [3.7    Conflicts](./chapter_3_7.md)
 
 [3.8    Pitfalls](./chapter_3_8.md)
+
+[3.9	Using the API to download a dataset as JSON](./chapter_3_9.md)
