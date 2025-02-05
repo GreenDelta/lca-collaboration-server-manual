@@ -42,3 +42,5 @@
 [3.8    Pitfalls](./chapter_3_8.md)
 
 [3.9	Using the API to download a dataset as JSON](./chapter_3_9.md)
+
+[3.10   Using git to update datasets programmatically](.chapter_3_10.md)
