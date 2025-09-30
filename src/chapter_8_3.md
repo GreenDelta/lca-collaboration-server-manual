@@ -46,9 +46,75 @@ We have prepared a configuration guide on openLCA.org - <a href="https://www.ope
 <br><b>Elasticsearch cluster:</b> The cluster name of your elasticsearch installation (default: elasticsearch)</br>
 <br><b>Elasticsearch server url:</b> The host address of the elasticsearch installation (default: localhost)</br>
 <br><b>Elasticsearch index name:</b> The name of the elasicsearch index used for this collaboration server instance (default: lca- collaboration)</br>
+<br/>
+<p>Default values for each setting can be specified programmatically before starting the application, see the list at the end of the page</p>
 
 <h2 id="header-8-3-2">8.3.2	Enabled features </h2>
 Some of the collaboration server’s advanced features can be disabled, including: Comments, Tasks, Messaging, Public repositories, Notifications, Activities and Tags (<a href="#Figure A-1">jump to figure above</a>).
 
 <h2 id="header-8-3-3">8.3.3	Mail Configuration </h2>
 To be able to use notifications, you need to configure an email account to send from. You can use an existing smpt email account (<a href="#Figure A-2">jump to figure above</a>).
+
+<h2 id="header-8-3-4">8.3.4 List of settings for setting default values in application.properties </h2>
+<p>The following settings can be set in WEB-INF/classes/application.properties after which a restart is required. They can afterwards still be changed in the UI</p>
+cs.settings.default-values.SERVER_SETTING.MESSAGING_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.TASKS_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.COMMENTS_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.RELEASES_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.NOTIFICATIONS_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.USER_REGISTRATION_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.USER_REGISTRATION_APPROVAL_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.CHANGE_LOG_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.DASHBOARD_ACTIVITIES_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.REPOSITORY_ACTIVITIES_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.HOMEPAGE_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.SEARCH_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.USAGE_SEARCH_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.REPOSITORY_TAGS_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.DATASET_TAGS_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.DATASET_TAGS_ON_DASHBOARD_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.DATASET_TAGS_ON_GROUPS_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.DATASET_TAGS_ON_REPOSITORIES_ENABLED={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.DOCKER_INSTALLATION={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.SERVER_NAME={String}<br/>
+cs.settings.default-values.SERVER_SETTING.SERVER_URL={String}<br/>
+cs.settings.default-values.SERVER_SETTING.REPOSITORY_PATH={String}<br/>
+cs.settings.default-values.SERVER_SETTING.LIBRARY_PATH={String}<br/>
+cs.settings.default-values.SERVER_SETTING.GLAD_URL={String}<br/>
+cs.settings.default-values.SERVER_SETTING.GLAD_API_KEY={String}<br/>
+cs.settings.default-values.SERVER_SETTING.GLAD_DATAPROVIDER={String}<br/>
+cs.settings.default-values.SERVER_SETTING.HOME_TITLE={String}<br/>
+cs.settings.default-values.SERVER_SETTING.HOME_TEXT={String}<br/>
+cs.settings.default-values.SERVER_SETTING.MAINTENANCE_MODE={Boolean}<br/>
+cs.settings.default-values.SERVER_SETTING.MAINTENANCE_MESSAGE={String}<br/>
+cs.settings.default-values.SERVER_SETTING.ANNOUNCEMENT_ID={String}<br/>
+cs.settings.default-values.SERVER_SETTING.ANNOUNCEMENT_MESSAGE={String}<br/>
+cs.settings.default-values.SERVER_SETTING.LICENSE_AGREEMENT_TEXT={String}<br/>
+cs.settings.default-values.SEARCH_SETTING.SCHEMA={String}<br/>
+cs.settings.default-values.SEARCH_SETTING.HOST={String}<br/>
+cs.settings.default-values.SEARCH_SETTING.PORT={Integer}<br/>
+cs.settings.default-values.SEARCH_INDEX.PRIVATE={String}<br/>
+cs.settings.default-values.SEARCH_INDEX.PUBLIC={String}<br/>
+cs.settings.default-values.SEARCH_INDEX.PRIVATE_USAGE={String}<br/>
+cs.settings.default-values.SEARCH_INDEX.PUBLIC_USAGE={String}<br/>
+cs.settings.default-values.MAIL_SETTING.USER={String}<br/>
+cs.settings.default-values.MAIL_SETTING.PASS={String}<br/>
+cs.settings.default-values.MAIL_SETTING.PROTO={String}<br/>
+cs.settings.default-values.MAIL_SETTING.HOST={String}<br/>
+cs.settings.default-values.MAIL_SETTING.PORT={Integer}<br/>
+cs.settings.default-values.MAIL_SETTING.SSL={Boolean}<br/>
+cs.settings.default-values.MAIL_SETTING.TLS={Boolean}<br/>
+cs.settings.default-values.MAIL_SETTING.DEFAULT_FROM={String}<br/>
+cs.settings.default-values.MAIL_SETTING.DEFAULT_REPLY_TO={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.COMPANY={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.CEO={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.STREET={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.ZIP_CODE={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.CITY={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.COUNTRY={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.PHONE={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.FAX={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.EMAIL={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.WEBSITE={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.REGISTRATION={String}<br/>
+cs.settings.default-values.IMPRINT_SETTING.VAT={String}<br/>
