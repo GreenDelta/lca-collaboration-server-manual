@@ -56,7 +56,11 @@ Some of the collaboration server’s advanced features can be disabled, includin
 To be able to use notifications, you need to configure an email account to send from. You can use an existing smpt email account (<a href="#Figure A-2">jump to figure above</a>).
 
 <h2 id="header-8-3-4">8.3.4 List of settings for setting default values in application.properties </h2>
-<p>The following settings can be set in WEB-INF/classes/application.properties after which a restart is required. They can afterwards still be changed in the UI</p>
+<p>The following settings can be set in WEB-INF/classes/application.properties after which a restart is required. They can afterwards still be changed in the UI, e.g.:</p>
+cs.settings.default-values.SERVER_SETTING.SEARCH_ENABLED=true<br/>
+cs.settings.default-values.SERVER_SETTING.SERVER_NAME=LCA Collaboration Server<br/>
+<br/>
+<p>The full list is</p>
 cs.settings.default-values.SERVER_SETTING.MESSAGING_ENABLED={Boolean}<br/>
 cs.settings.default-values.SERVER_SETTING.TASKS_ENABLED={Boolean}<br/>
 cs.settings.default-values.SERVER_SETTING.COMMENTS_ENABLED={Boolean}<br/>
@@ -75,7 +79,6 @@ cs.settings.default-values.SERVER_SETTING.DATASET_TAGS_ENABLED={Boolean}<br/>
 cs.settings.default-values.SERVER_SETTING.DATASET_TAGS_ON_DASHBOARD_ENABLED={Boolean}<br/>
 cs.settings.default-values.SERVER_SETTING.DATASET_TAGS_ON_GROUPS_ENABLED={Boolean}<br/>
 cs.settings.default-values.SERVER_SETTING.DATASET_TAGS_ON_REPOSITORIES_ENABLED={Boolean}<br/>
-cs.settings.default-values.SERVER_SETTING.DOCKER_INSTALLATION={Boolean}<br/>
 cs.settings.default-values.SERVER_SETTING.SERVER_NAME={String}<br/>
 cs.settings.default-values.SERVER_SETTING.SERVER_URL={String}<br/>
 cs.settings.default-values.SERVER_SETTING.REPOSITORY_PATH={String}<br/>
